@@ -5,6 +5,17 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: PageView(
+        children: [1, 2, 3, 4]
+            .map(
+              (e) => Image.asset(
+                'asset/img/page_$e.png',
+                fit: BoxFit.fill,
+              ),
+            )
+            .toList(),
+      ),
+    );
   }
 }
